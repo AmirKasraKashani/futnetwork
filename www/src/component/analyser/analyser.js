@@ -185,13 +185,13 @@ const Analyser = (props) =>{
                     {
                         filter
                     }
-                    <div className="analyserFooter">
+                    {/* <div className="analyserFooter">
                         <ul>
                             <li>
                                 <Link to="/">Back</Link>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="graphContainer">
                     <div className="graph" id="mynetwork">
