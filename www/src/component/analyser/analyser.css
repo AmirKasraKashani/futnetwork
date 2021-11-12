@@ -1,0 +1,78 @@
+.analyserContainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/stadium.jpg");
+    background-size: 100% 100%;
+}
+.analyser{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    padding: 7rem 10rem 2rem 10rem;
+    gap: 0.7rem;
+}
+.graphContainer{
+    width: 50%;
+    /* height: 80vh; */
+    height: inherit;
+    background-color: #000000be;
+}
+.analyserControls{
+    width: 50%;
+    height: inherit;
+    background-color: #000000be;
+    position: relative;
+}
+.graph{
+    height: 100%;
+}
+.option{
+    margin-top: 1rem;
+    width: 100%;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.analyserNav{
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: -40px;
+    left: 0;
+}
+.analyserNav ul{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: inherit;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    align-items: center;
+    justify-content: flex-start;
+}
+.analyserNav li{
+    width: 100%;
+    height: inherit;
+    text-align: center;
+    line-height: 40px;
+    background-color: #000000;
+}
+.analyserNav li:hover{
+    color: #F5B93D;
+    cursor: pointer;
+}
+.analyserFooter ul{
+    padding: 0;
+    margin-top: 2rem;
+    color: #ffffff;
+    list-style: none;
+}
+.analyserFooter a{
+    color: inherit;
+    text-decoration: none;
+}

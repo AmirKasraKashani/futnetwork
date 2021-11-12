@@ -1,0 +1,39 @@
+@font-face {
+    font-family: IRANYekanBold;
+    src: url("../../../assets/fonts/IRANYekanBold.woff");
+}
+@font-face {
+    font-family: IRANYekanLight;
+    src: url("../../../assets/fonts/IRANYekanLight.woff");
+}
+@font-face{
+    font-family: IRANYekanMedium;
+    src: url("../../../assets/fonts/IRANYekanMedium.woff");
+}
+@font-face{
+    font-family: AlatsiRegular;
+    src: url("../../../assets/fonts/AlatsiRegular.woff");
+}
+@font-face {
+    font-family: IRANYekanFat;
+    src: url("../../../assets/fonts/IRANYekanFat.woff");
+}
+@font-face {
+    font-family: IRANSansWebFaNum;
+    src: url("../../../assets//fonts/IRANSansWebFaNum.woff");
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+*{
+    font-family: AlatsiRegular , fallback, IRANSansWebFaNum;
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+}
