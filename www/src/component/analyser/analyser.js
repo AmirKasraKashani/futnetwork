@@ -145,14 +145,14 @@ const Analyser = (props) =>{
                     key="Options"
                     data={[
                         {
-                            category: "phyical",
+                            category: "physical",
                             state: physical,
                             image: gym,
                             setState: setPhysical,
                             adjectives: ["height", "weight", "age"]
                         },
                         {
-                            category: "attribute",
+                            category: "attributes",
                             state: attribute,
                             image: football,
                             setState: setAttribute,
