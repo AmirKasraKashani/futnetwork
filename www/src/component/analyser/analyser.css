@@ -17,7 +17,6 @@
 }
 .graphContainer{
     width: 50%;
-    /* height: 80vh; */
     height: inherit;
     background-color: #000000be;
 }
@@ -75,4 +74,17 @@
 .analyserFooter a{
     color: inherit;
     text-decoration: none;
+}
+.graphLoading{
+    width: 50%;
+    /* height: 80vh; */
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000be;
+}
+.graphLoading .vis-network{
+    display: none;
 }

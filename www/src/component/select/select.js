@@ -10,7 +10,7 @@ const Select = (props) =>{
                     <p>{props.title}</p>
                 </div>
                 <div className="selectImage">
-                    {props.value ? <img src={`http://localhost:8000/api${props.value.image}`}/> : null}
+                    {props.value ? <img src={`https://api.futn.ir/api${props.value.image}`}/> : null}
                 </div>
             </div>
             {props.children}

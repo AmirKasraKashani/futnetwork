@@ -19,6 +19,7 @@ const Analyser = (props) =>{
     const [nation, setNation] = useState()
     const [club, setClub] = useState()
     const [league, setLeague] = useState()
+    const [loading, setLoading] = useState(false)
     const [physical, setPhysical] = useState({
         height: false,
         weight: false,
@@ -62,30 +63,30 @@ const Analyser = (props) =>{
         })
     }, [])
     useEffect(() =>{
-        league !== undefined ? 
-        axios.get(`/clubs?league=${league.id}`)
+        axios.get(league ? `/clubs?league=${league.id}` : `/clubs`)
         .then(({data}) =>{
             setClubs(data)
         })
         .catch(err =>{
             console.log(err)
         })
-        : console.log("none")
     }, [league])
     useEffect(() =>{
-        club !== undefined?
-        axios.get(`/players?club=${club.id}${nation? `&nation=${nation.id}`: ""}`)
-        .then(({data}) =>{
-            setPlayers(data)
-        })
-        .catch(err =>{
-            console.log(err)
-        })
-        : console.log("none")
+        if(club !== undefined){
+            setLoading(true)
+            axios.get(`/players?club=${club.id}${nation? `&nation=${nation.id}`: ""}`)
+            .then(({data}) =>{
+                setLoading(false)
+                setPlayers(data)
+            })
+            .catch(err =>{
+                setLoading(false)
+            })
+        }
     }, [club, nation])
-    if(players && adjectives){
-        Graph(players,adjectives)
-    }
+    useEffect(() =>{
+        Graph(players, adjectives)
+    }, [players, adjectives])
     const onReset = (setState) =>{
         setState()
     }
@@ -100,13 +101,17 @@ const Analyser = (props) =>{
         case "Leagues":
             filter = (
                 <Select value={league} title="Leagues">
-                    <Filter key="Leagues" onSelect={(id, name, image) =>{
-                        setLeague({
-                            id: id,
-                            name: name,
-                            image: image
-                        })
-                    }}  
+                    <Filter key="Leagues" state={league} onSelect={(id, name, image) =>{
+                        if(!league || league.name !== name){
+                            setLeague({
+                                id: id,
+                                name: name,
+                                image: image
+                            })
+                        }else{
+                            setLeague()
+                        }
+                    }}
                     data={leagues}/>
                 </Select>
             )
@@ -114,13 +119,17 @@ const Analyser = (props) =>{
         case "Clubs":
             filter = (
                 <Select value={club} title="Clubs">
-                    <Filter key="Clubs" onSelect={(id, name, image) =>{
-                        setClub({
-                            id: id,
-                            name: name,
-                            image: image
-                        })
-                    }}  
+                    <Filter key="Clubs" state={club} onSelect={(id, name, image) =>{
+                        if(!club || club.name !== name){
+                            setClub({
+                                id: id,
+                                name: name,
+                                image: image
+                            })
+                        }else{
+                            setClub()
+                        }
+                    }}
                     data={clubs}/>
                 </Select>
             )
@@ -128,12 +137,16 @@ const Analyser = (props) =>{
         case "Nations":
             filter = (
                 <Select value={nation} title="Nations">
-                    <Filter key="Nations" onSelect={(id, name, image) =>{
-                        setNation({
-                            id: id,
-                            name: name,
-                            image: image
-                        })
+                    <Filter key="Nations" state={nation} onSelect={(id, name, image) =>{
+                         if(!nation || nation.name !== name){
+                            setNation({
+                                id: id,
+                                name: name,
+                                image: image
+                            })
+                        }else{
+                            setNation()
+                        }
                     }}  
                     data={nations}/>
                 </Select>
@@ -168,6 +181,12 @@ const Analyser = (props) =>{
                 <About/>
             )
             break
+    }           
+    let graph = <div className="graphContainer" id="mynetwork"/>
+    if(loading === true){
+        graph = <div className="graphLoading">
+            <h1>Loading...</h1>
+        </div>
     }
     return(
         <div className="analyserContainer">
@@ -193,13 +212,7 @@ const Analyser = (props) =>{
                         </ul>
                     </div> */}
                 </div>
-                <div className="graphContainer">
-                    <div className="graph" id="mynetwork">
-                    </div>
-                    <div className="console">
-
-                    </div>
-                </div>
+                {graph}
             </div>
         </div>
     )

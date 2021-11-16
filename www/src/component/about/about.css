@@ -15,7 +15,11 @@
 }
 .aboutHeader h1{
     margin: 0;
+    font-size: 2vw;
     color: #ffffff;
+}
+.aboutFooter{
+    font-size: 1vw;
 }
 .aboutBody{
     height: 93.1%;

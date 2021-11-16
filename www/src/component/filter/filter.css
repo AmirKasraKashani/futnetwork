@@ -15,7 +15,7 @@
     height: 10%;
 }
 .filter input{
-    background-color: #6B6974;
+    background-color: #afafaf;
     padding: 0 2rem;
     width: 100%;
     height: 100%;
@@ -41,6 +41,10 @@
 .filter li:hover{
     background-color: #F5B93D;
     color: #000000;
+}
+.chosen{
+    background-color: #F5B93D !important;
+    color: #000000 !important;
 }
 /* .filter li:hover{
     background-color: rgb(235, 235, 235);

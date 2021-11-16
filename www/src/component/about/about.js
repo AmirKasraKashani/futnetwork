@@ -14,12 +14,12 @@ const About = (props) =>{
                         Football Ultimate Team Network
                     </h1>
                 </div>
-                <div className="aboutFooter">
-                    <p>Created by Amirkasra Momen Kashani and Mostafa Izadloo</p>
-                </div>
                 <div className="about">
                     <p>
                     </p>
+                </div>
+                <div className="aboutFooter">
+                    <p>Created by Amirkasra Momen Kashani and Mostafa Izadloo</p>
                 </div>
             </div>
         </div>

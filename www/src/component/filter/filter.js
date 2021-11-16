@@ -5,7 +5,7 @@ const Filter = (props) =>{
     const [search, setSearch] = useState("");
     const data = props.data.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
     const items = data.map(item =>(
-        <li key={item.id} onClick={() =>props.onSelect(item.id, item.name, item.image)}>
+        <li className={props.state && props.state.name === item.name ? "chosen": null} key={item.id} onClick={() =>props.onSelect(item.id, item.name, item.image)}>
             <p>{item.name}</p>
         </li>
     ))
