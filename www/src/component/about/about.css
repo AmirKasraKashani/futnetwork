@@ -1,0 +1,40 @@
+.aboutContainer{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+}
+.aboutTitle{
+    width: inherit;
+    height: 6.9%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+}
+.aboutHeader h1{
+    margin: 0;
+    font-size: 2vw;
+    color: #ffffff;
+}
+.aboutFooter{
+    font-size: 1vw;
+}
+.aboutBody{
+    height: 93.1%;
+    padding: 1rem 2rem;
+}
+.aboutHeader{
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.about{
+    height: 70%;
+}
+
+.aboutFooter{
+    height: 10%;
+}

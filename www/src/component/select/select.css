@@ -1,0 +1,33 @@
+.selectContainer{
+    width: 100%;
+    height: inherit;
+}
+.selectHeader{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: inherit;
+    height: 30%;
+}
+.selectTitle{
+    height: 25%;
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 2rem;
+}
+.selectImage{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+    width: 100%;
+    height: 80%;
+}
+.selectHeader img{
+    max-width: 100px;
+}

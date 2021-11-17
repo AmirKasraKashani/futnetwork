@@ -1,0 +1,95 @@
+.adjective{
+    width: 100%;
+    height: inherit;
+    color: #fff;
+}
+.adjectives ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height:50%;
+    overflow-y: auto;
+}
+.adjectives li{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 30px;
+    color: #a3a3a3c0;
+    cursor: pointer;
+}
+.adjectives li:nth-child(odd){
+    background-color: #00000069;
+}
+.adjectives li:hover{
+    background-color: #F5B93D;
+    color: #000000;
+}
+.adjectives li img{
+    height: 30px;
+}
+.adjective p{
+    color: inherit;
+}
+.adjectiveIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.adjectiveTitle{
+    width: inherit;
+    height: 17%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    align-items: center;
+    background-color: #000000;
+}
+.categoryName{
+    width: inherit;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 2rem;
+    color: #fff;
+}
+.categoryName h1{
+    margin: 0;
+}
+.categoryImages{
+    width: inherit;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+.categoryImages li{
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.categoryImages img{
+    width: 30px;
+    height: 30px;
+}
+
+.category{
+    width: inherit;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
